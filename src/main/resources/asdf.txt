@@ -1,0 +1,4 @@
+//Frame f = new Frame(); //f라는 Frame 생성
+        //f.setTitle("식당 메뉴판 정리 프로그램"); //창제목을 설정
+        //f.setBounds(1920/4, 1080/4, 1920/2, 1080/2); //창크기를 설정
+        //f.setVisible(true); //창보이기 값 설정
