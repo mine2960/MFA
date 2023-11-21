@@ -60,7 +60,6 @@ public class Main{
             System.out.println("다운로드 파일 디렉토리가 존재하지 않거나 디렉토리가 아닙니다.");
         }
 
-        //new mainPage();
         new RoundedRectanglesGUI();
     }
 }
