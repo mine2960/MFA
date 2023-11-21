@@ -42,7 +42,7 @@ public class mainPage extends JFrame {
                 g2d.fillRoundRect(splitPoint + padding, padding, rectWidth, rectHeight, 20, 20);
             }
         };
-        // 프레임에 전체 패널 추가
+        // 프레임 에 전체 패널 추가
         add(mainPanel);
     }
 }
