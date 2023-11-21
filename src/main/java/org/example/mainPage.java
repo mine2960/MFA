@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class mainPage extends JFrame {
-
     public mainPage() {
         setTitle("Custom GUI");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -13,7 +12,7 @@ public class mainPage extends JFrame {
         setVisible(true);
 
         // 왼쪽 2/3 부분을 나타내는 패널
-        JPanel leftPanel = new JPanel() {
+        JPanel mainPanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
@@ -44,6 +43,6 @@ public class mainPage extends JFrame {
             }
         };
         // 프레임에 전체 패널 추가
-        add(leftPanel);
+        add(mainPanel);
     }
 }
