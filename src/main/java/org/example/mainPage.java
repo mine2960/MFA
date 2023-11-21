@@ -19,37 +19,11 @@ public class mainPage extends JFrame {
         setLayout(null);
 
         Dimension FD = getSize();
-        JPanel rightPanel = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.fillRoundRect(
-                        0 , 0 ,
-                        FD.width, FD.height - 40,
-                        30, 30); // R15 곡선 처리
-            }
-        };
-        rightPanel.setBackground(Color.white);
-        rightPanel.setBounds(
-                (int) (FD.width * 2.0 / 3.0) + 5 , 0 ,
-                (int) (FD.width / 3.0) - 20 , FD.height - 40);
+        JPanel rightPanel = getRightPanel(FD);
         add(rightPanel);
 
         // 왼쪽 회색 공간
-        JPanel leftPanel = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.fillRoundRect(
-                        -15 , 0 ,
-                        (int) (FD.width * 2.0 / 3.0) - 5 , FD.height - 40,
-                        30, 30); // R15 곡선 처리
-            }
-        };
-        leftPanel.setBounds(
-                0 , 0 ,
-                (int) (FD.width * 2.0 / 3.0) - 5 , FD.height - 40);
-        leftPanel.setBackground(Color.white);
+        JPanel leftPanel = getLeftPanel(FD);
         add(leftPanel);
 
         /*
@@ -94,5 +68,31 @@ public class mainPage extends JFrame {
         add(buttonPanel);
 
          */
+    }
+
+    private static JPanel getLeftPanel(Dimension FD) {
+        JPanel leftPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.fillRoundRect(-15 , 0 , (int) (FD.width * 2.0 / 3.0) - 5 , FD.height - 40, 30, 30); // R15 곡선 처리
+            }
+        };
+        leftPanel.setBounds(0 , 0 , (int) (FD.width * 2.0 / 3.0) - 5 , FD.height - 40);
+        leftPanel.setBackground(Color.white);
+        return leftPanel;
+    }
+
+    private static JPanel getRightPanel(Dimension FD) {
+        JPanel rightPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.fillRoundRect(0 , 0 , FD.width, FD.height - 40, 30, 30); // R15 곡선 처리
+            }
+        };
+        rightPanel.setBackground(Color.white);
+        rightPanel.setBounds((int) (FD.width * 2.0 / 3.0) + 5 , 0 , (int) (FD.width / 3.0) - 20 , FD.height - 40);
+        return rightPanel;
     }
 }
