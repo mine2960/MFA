@@ -3,9 +3,9 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 
-public class RoundedRectanglesGUI extends JFrame {
+public class mainPage extends JFrame {
 
-    public RoundedRectanglesGUI() {
+    public mainPage() {
         setTitle("Custom GUI");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1920/2, 1080/2);
